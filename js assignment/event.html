@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		table{
+			font-size: 1em;
+			margin: 1em auto;
+			border-collapse: collapse;
+		}
+		th, td{
+			width: 1.2em;
+			line-height: 2em;
+			text-align: right;
+			padding: 0em 0.4em;
+			color: #333;
+			border: 2px solid #666;
+			cursor: pointer;
+		}
+		col.active, tr.active td{
+			background: #ddd;
+
+		}
+		tr td:hover, tr td:focus{
+			color: #f00;
+			background: #ffc;
+		}
+	</style>
+</head>
+<body>
+	<!--<button id="btn">click me</button>
+	<input type="text" name="nm" placeholder="my name">
+	<select>
+		<option>music</option>
+		<option>football</option>
+		<option>food</option>
+		<option>movies</option>
+	</select>
+	<div>
+		<input type="color" class="color">
+	</div>
+
+	<table id="multiplication">
+		<colgroup>
+			<col></col>
+			<col></col>
+			<col></col>
+			<col></col>
+			<col></col>
+			<col></col>
+		</colgroup>
+		<tr>
+			<th>x</th>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+		</tr>
+		<tr>
+			<th>1</th>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<th>2</th>
+			<td>2</td>
+			<td>4</td>
+			<td>6</td>
+			<td>8</td>
+			<td>10</td>
+		</tr>
+		<tr>
+			<th>3</th>
+			<td>3</td>
+			<td>6</td>
+			<td>9</td>
+			<td>12</td>
+			<td>15</td>
+		</tr>
+		<tr>
+			<th>4</th>
+			<td>4</td>
+			<td>8</td>
+			<td>12</td>
+			<td>16</td>
+			<td>20</td>
+		</tr>
+		<tr>
+			<th>5</th>
+			<td>5</td>
+			<td>10</td>
+			<td>15</td>
+			<td>20</td>
+			<td>25</td>
+		</tr>
+	</table>
+
+
+
+
+	<div>
+    <label>Name of club</label><br/>
+    <select name="clubName" id="clubName" onchange="LoadPlayers(this);">
+        <option value="Chelsea">Chelsea</option>
+        <option value="Arsenal">Arsenal</option>
+        <option value="ManCity">ManCity</option>
+        <option value="ManUtd">ManUtd</option>
+        <option value="Spurs">Spurs</option>
+    </select>
+</div>
+<br/>
+<br/>
+<div>
+    <label>Players</label>
+    <select name="Players" id="Players"></select>
+</div>
+
+<script>
+    var object ={
+        'Chelsea':['Hazard', 'Pedro', 'Costa', 'Luis'],
+        'Arsenal':['Ozil', 'Ramsey', 'Sanchez', 'Cozola'],
+        'ManCity':['Aguero', 'Yaya', 'Debrune', 'Kompany'],
+        'ManUtd':['Rooney', 'Mata', 'Rashford', 'Pogba'],
+        'Spurs':['Kane', 'Alli', 'Son', 'Erickson']
+    }
+    
+	function LoadPlayers(Ctrl) {
+		// Create a reference to the ClubName select
+		var e = document.getElementById("clubName");
+		var PlayersSelect = document.getElementById("Players");
+		
+		// Get the selected Value
+		var club = e.options[e.selectedIndex].value;
+		
+		// clear the Players list of all values
+		 document.getElementById("Players").options.length = 0;
+		 
+		// Find the Club based on the name from the object
+		for (var key in object) {
+			if (key === club) {
+				var _players = object[key];
+				for (var i in object[key]) {
+				  var opt = document.createElement("option");
+				   opt.value = object[key][i];
+				   opt.innerHTML = object[key][i]; // whatever property it has
+
+				   // then append it to the select element
+				   PlayersSelect.appendChild(opt);
+				}
+			};
+		}
+	}
+	
+</script>-->
+	<div>
+	    <label>Name of club</label><br/>
+	    <select name="clubName" id="clubName" onchange="LoadPlayers(this);">
+	        <option value="football">football</option>
+	        <option value="tennis">tennis</option>
+	        <option value="track">track</option>
+	    </select>
+	
+	    <label>Players</label>
+	    <select name="Players" id="Players"></select>
+	</div>
+ 	<script src="event.js"></script>
+</body>
+</html>
